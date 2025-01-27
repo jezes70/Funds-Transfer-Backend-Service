@@ -66,8 +66,8 @@ And then follow the step by step guide (below) to interact with the system.
 
 ### To run tests
 
-Open the application in intellij, click on src/test/java directory in project explorer, and right click -> Run As -> JUnit test
-  
+Open the application in eclipse, and right click on src/test/java directory in project explorer, and right click -> Run As -> JUnit test
+ 
 ## Cucumber Tests (BDD)
 
 For those not familiar with it, this is how Cucumber tests written in Gherkin look like. As you can see, non-techies can also write tests cases. BDD was meant for business users to write tests in natural language to confirm the system to their requirement. This does not disappoint, instead it makes me want to write more tests!
