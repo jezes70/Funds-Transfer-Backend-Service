@@ -38,16 +38,6 @@ import lombok.ToString;
   generator = ObjectIdGenerators.PropertyGenerator.class, 
   property = "id")
 public class Transaction implements Serializable {
-	
-	/*
-	public enum TransactionTypeCode { 
-		IN ("IN"),
-		OUT("OUT");		
-		private String value;
-		TransactionTypeCode(String val) { value = val; }
-		public String getValue() { return value; }		
-	}
-	*/
 	public enum TransactionTypeCode {  IN , OUT	 }
 	
 	@Id
