@@ -124,10 +124,7 @@ public class AccountController {
 
 		try { 
 			accountService.transfer(fromAccount, toAccount, transferDto.getAmount());
-		} catch(OptimisticLockingFailureException ex) { 
-			// this will happen when a race condition happens (eg user has balance 100 pounds, and initiates 2 transfers of 100 each from different devices at same time
-			//in that case transfer from one of the device will fail, and transaction failure will lead to a OptimisticLockingFailureException, this will be caught here and approprite error
-			// message is sent back to user.
+		} catch(OptimisticLockingFailureException ex) {
 			return ResponseEntity.badRequest().body(ValidationMessages.MONEY_TRANSFER_TRANSACTION_FAILED_PLEASE_TRY_AGAIN);
 		}
 		return ResponseEntity.ok().body(ValidationMessages.TRANSFER_SUCCESSFUL);
