@@ -16,7 +16,6 @@ To write a money transfer service that will:
 ## Technology
 Technology / Library / Framework used:
 
-  * Java 8
   * Spring Boot
   * REST API
   * Maven
