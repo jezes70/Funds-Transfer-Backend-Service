@@ -62,7 +62,6 @@ public class AccountServiceImpl implements AccountService {
 		transaction.setBalance(account.getBalance());
 		transaction.setTransactionDate(openDate);
 		transaction.setTypeCode(TransactionTypeCode.IN);
-		//when account opens for first time, we give a standard name for counterparty
 		transaction.setCounterparty("INITIAL DEPOSIT");
 		
 		account.getTransactions().add(transaction);	
